@@ -3,10 +3,12 @@
     src: url('ZantsinYapantsHandwriting-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    color: #911919;
 }
 
 body {
     font-family: 'ZantsinYapantsHandwriting-Regular', Arial, sans-serif;
+    color: #911919;
 }
 
 #playSong {
