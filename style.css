@@ -5,11 +5,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'TeejHandwriting';
+    src: url('TeejHandwriting-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'ZantsinYapantsHandwriting-Regular', Arial, sans-serif;
     color: #911919; /* Maroon text */
-    background-color: white; /* White background */
-    text-align: center; /* Centering text */
+    background-color: #f5f1e6; /* Light Beige */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,39 +26,16 @@ body {
     padding: 20px;
 }
 
-h1, h2, p, ul, img, video, button {
-    text-align: center;
+h1 {
+    font-size: 6rem; /* Extra Huge Heading */
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-#playSong {
-    padding: 10px 20px;
-    font-family: 'ZantsinYapantsHandwriting-Regular';
-    font-size: 1rem;
-    font-weight: 900;
-    font-size: larger;
-    background-color: white; /* White button */
-    color: #911919; /* Maroon text */
-    border: 2px solid #911919; /* Maroon border */
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#playSong:hover {
-    background-color: #911919; /* Maroon background on hover */
-    color: white; /* White text on hover */
-}
-
-@font-face {
-    font-family: 'TeejHandwriting';
-    src: url('TeejHandwriting-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.story.page {
-    font-family: 'TeejHandwriting', Arial, sans-serif;
-    text-align: center;
+h2 {
+    font-size: 3rem; /* Bigger Subheading */
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .no-bullets {
@@ -60,20 +44,69 @@ h1, h2, p, ul, img, video, button {
     margin: 0;
 }
 
-a {
-    font-size: 1.5rem; /* Makes the links bigger */
-    font-weight: bolder;
-    color: #911919; /* Matches the text color */
-    text-decoration: none; /* Removes underline */
-    padding: 10px 20px;
-    border: 2px solid #911919; /* Adds a maroon border */
-    border-radius: 15px; /* Rounds the corners */
-    display: inline-block; /* Ensures proper spacing */
-    margin: 10px; /* Adds space around links */
-    transition: background-color 0.3s ease, color 0.3s ease;
+.no-bullets li {
+    font-size: 2.5rem; /* Makes the list text larger */
+    margin: 15px 0;
+    display: block;
 }
 
-a:hover {
-    background-color: #911919; /* Maroon background on hover */
-    color: white; /* White text on hover */
+/* Styling for Links and Button - Same Size & Thickness */
+a, #playSong {
+    font-size: 2rem; /* Matches "Threads & Tides" */
+    font-weight: bold;
+    color: #911919;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 3px solid #911919; /* Same border thickness */
+    border-radius: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 8px; /* Reduced margin to bring them closer */
+}
+
+a:hover, #playSong:hover {
+    background-color: #911919;
+    color: #f5f1e6;
+}
+
+/* Fix for Story Page */
+.story {
+    font-family: 'TeejHandwriting', Arial, sans-serif;
+}
+
+.story p {
+    font-size: 2.2rem; /* Bigger Story Text */
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.story h1 {
+    font-size: 4.5rem; /* Bigger Story Title */
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Reduce spacing between the "Time Since We Got Together" text and counter */
+p:last-of-type {
+    font-size: 2.5rem; /* Make it a little bigger */
+    margin-bottom: 0px; /* Removes excess space below it */
+}
+
+#counter {
+    font-size: 4rem;
+    margin-top: -5px; /* Pulls it up closer to the text */
+}
+
+/* Ensure button is the same size and not too far down */
+#playSong {
+    font-family: 'ZantsinYapantsHandwriting-Regular';
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f5f1e6;
+    color: #911919;
+    border: 3px solid #911919; /* Same border thickness */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 30px; /* Less space below */
 }
