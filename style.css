@@ -19,17 +19,20 @@ body {
     padding: 20px;
 }
 
-h1, h2, p, ol, img, video, button {
+h1, h2, p, ul, img, video, button {
     text-align: center;
 }
 
 #playSong {
     padding: 10px 20px;
+    font-family: 'ZantsinYapantsHandwriting-Regular';
     font-size: 1rem;
+    font-weight: 900;
+    font-size: larger;
     background-color: white; /* White button */
     color: #911919; /* Maroon text */
     border: 2px solid #911919; /* Maroon border */
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -59,11 +62,12 @@ h1, h2, p, ol, img, video, button {
 
 a {
     font-size: 1.5rem; /* Makes the links bigger */
+    font-weight: bolder;
     color: #911919; /* Matches the text color */
     text-decoration: none; /* Removes underline */
     padding: 10px 20px;
     border: 2px solid #911919; /* Adds a maroon border */
-    border-radius: 10px; /* Rounds the corners */
+    border-radius: 15px; /* Rounds the corners */
     display: inline-block; /* Ensures proper spacing */
     margin: 10px; /* Adds space around links */
     transition: background-color 0.3s ease, color 0.3s ease;

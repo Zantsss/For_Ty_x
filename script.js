@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     playButton.addEventListener("click", function () {
         if (song.paused) {
             song.play();
-            playButton.textContent = "Pause";
+            playButton.textContent = "PAUUUUUSEEE";
         } else {
             song.pause();
-            playButton.textContent = "Resume 3rd Option";
+            playButton.textContent = "RESUUUUUME";
         }
     });
 });
