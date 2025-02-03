@@ -25,8 +25,8 @@ function updateCounter() {
         return;
     }
 
-    const minutes = Math.floor(diff / (1000 * 60)); // Convert to minutes
-    document.getElementById("counter").textContent = `${minutes.toLocaleString()} minutes`;
+    const minutes = Math.floor(diff / (1000));
+    document.getElementById("counter").textContent = `${minutes.toLocaleString()} seconds`;
 }
 
 // Update the counter every second
