@@ -50,21 +50,23 @@ h2 {
     display: block;
 }
 
-/* Styling for Links and Button - Same Size & Thickness */
-a, #playSong {
-    font-size: 2rem; /* Matches "Threads & Tides" */
+/* Styling for Links & Buttons */
+a, #playSong, #extraContent {
+    font-size: 2rem; /* Bigger link text */
     font-weight: bold;
-    color: #911919;
+    color: #911919; /* Same as text */
     text-decoration: none;
     padding: 15px 30px;
-    border: 3px solid #911919; /* Same border thickness */
+    border: 3px solid #911919;
     border-radius: 20px;
     display: inline-block;
+    margin: 10px; /* Reduced margin for tighter spacing */
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 8px; /* Reduced margin to bring them closer */
+    width: 220px; /* Forces all buttons/links to have the same length */
+    text-align: center;
 }
 
-a:hover, #playSong:hover {
+a:hover, #playSong:hover, #extraContent:hover {
     background-color: #911919;
     color: #f5f1e6;
 }
@@ -86,27 +88,52 @@ a:hover, #playSong:hover {
     margin-bottom: 25px;
 }
 
-/* Reduce spacing between the "Time Since We Got Together" text and counter */
-p:last-of-type {
-    font-size: 2.5rem; /* Make it a little bigger */
-    margin-bottom: 0px; /* Removes excess space below it */
+/* Ensures links and button are spaced evenly */
+a, #playSong, #extraContent {
+    display: inline-block; /* Ensures proper spacing */
+    margin: 15px; /* Adjusted spacing for even distribution */
 }
 
-#counter {
-    font-size: 4rem;
-    margin-top: -5px; /* Pulls it up closer to the text */
-}
-
-/* Ensure button is the same size and not too far down */
+/* Custom Button */
 #playSong {
+    padding: 15px 30px;
     font-family: 'ZantsinYapantsHandwriting-Regular';
     font-size: 2rem;
     font-weight: bold;
-    background-color: #f5f1e6;
-    color: #911919;
+    background-color: #f5f1e6; /* Beige button */
+    color: #911919; /* Maroon text */
     border: 3px solid #911919; /* Same border thickness */
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-bottom: 30px; /* Less space below */
+    margin-bottom: 30px; /* Adjusted margin */
+}
+
+/* Timer Section */
+#timerContainer {
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 10px; /* Reduced spacing from 'Time Since We Got Together' */
+}
+
+#timerContainer p {
+    font-size: 2.5rem; /* Bigger timer labels */
+    margin: 5px 0; /* Reducing space between elements */
+}
+
+#timerContainer {
+    display: inline-block;
+    text-align: center;
+}
+
+#counter {
+    font-size: 4rem; /* Keeps the counter big */
+    margin-top: 0px; /* Reduces space above it */
+}
+
+/* New Extra Content Link */
+#extraContent {
+    background-color: #f5f1e6; /* Same as other buttons */
+    color: #911919;
+    font-size: 2rem;
 }
