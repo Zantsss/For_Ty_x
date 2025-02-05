@@ -9,77 +9,118 @@ body {
     color: #911919;
     text-align: center;
     padding: 20px;
+    margin: 0;
 }
 
-h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-}
-
-#timer {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-table#crossword {
+/* Crossword Grid */
+.crossword-container {
+    display: grid;
+    grid-template-columns: repeat(18, 40px);
+    grid-template-rows: repeat(18, 40px);
+    gap: 2px;
+    padding: 10px;
     margin: 20px auto;
-    border-collapse: collapse;
+    width: fit-content; /* Prevent extra space */
 }
 
-table#crossword td {
-    border: 2px solid #911919;
+/* Each Cell */
+.cell {
     width: 40px;
     height: 40px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid black;
+    background-color: white;
 }
 
-table#crossword input {
+/* Maroon Blocks */
+.maroon {
+    background-color: maroon;
+}
+
+/* Input fields inside crossword */
+input {
     width: 100%;
     height: 100%;
-    border: none;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 18px;
+    font-weight: bold;
     text-transform: uppercase;
+    border: none;
+    background: transparent;
     font-family: 'TeejHandwriting', Arial, sans-serif;
 }
 
-.black {
-    background-color: #911919;
+input:focus {
+    outline: none;
+    border: none;
 }
 
-
-#checkPuzzle {
+/* Buttons */
+button, #homeButton {
+    font-family: 'TeejHandwriting', Arial, sans-serif;
     font-size: 2rem;
     font-weight: bold;
     background-color: #f5f1e6;
     color: #911919;
     border: 3px solid #911919;
-    border-radius: 20px;
     padding: 15px 30px;
-    margin-top: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#checkPuzzle:hover {
+button:hover, #homeButton:hover {
     background-color: #911919;
     color: #f5f1e6;
 }
 
-#result {
-    font-size: 2rem;
-    margin-top: 20px;
+/* Remove underline from "Back Home" */
+#homeButton {
+    text-decoration: none;
 }
 
-a {
-    font-size: 2rem; /* Bigger link text */
+/* Clue Section */
+.clues-column h2 {
+    font-size: 3rem;
+}
+
+.clues-column ul {
+    font-size: 2rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Pause Overlay */
+#pauseOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(245, 241, 230, 0.95); /* Beige overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* Resume Button */
+#resumeButton {
+    font-family: 'TeejHandwriting', Arial, sans-serif;
+    font-size: 2rem;
     font-weight: bold;
-    color: #911919; /* Same as text */
-    text-decoration: none;
-    padding: 15px 30px;
+    background-color: #911919;
+    color: #f5f1e6;
     border: 3px solid #911919;
-    border-radius: 20px;
-    display: inline-block;
-    margin: 10px; /* Reduced margin for tighter spacing */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width: 220px; /* Forces all buttons/links to have the same length */
-    text-align: center;
+    padding: 15px 30px;
+    border-radius: 15px;
+    cursor: pointer;
 }

@@ -16,50 +16,20 @@
     <p id="timer">Time Elapsed: 0 min 0 sec</p>
 
     <!-- Crossword Grid -->
-    <table id="crossword">
-        <!-- Loop to create an 18x18 grid -->
-        <script>
-            document.write('<tbody>');
-            for (let y = 0; y < 18; y++) {
-                document.write('<tr>');
-                for (let x = 0; x < 18; x++) {
-                    let answer = "";
-                    let isBlack = false;
+    <div class="crossword-container" id="crossword"></div>
 
-                    // Define crossword answer positions (Manually placed based on the grid)
-                    const answers = {
-                        "10,1": "Y", "11,1": "E", "12,1": "A", "13,1": "R", "14,1": "N", "15,1": "E", "16,1": "R", "17,1": "S", // YEARNERS
-                        "0,2": "S", "1,2": "P", "2,2": "A", "3,2": "R", // SPAR
-                        "6,2": "S", "7,2": "W", "8,2": "I", "9,2": "S", "10,2": "S", "11,2": "R", "12,2": "O", "13,2": "L", "14,2": "L", // SWISSROLL
-                        "10,3": "R", "10,4": "E", "10,5": "L", "10,6": "E", "10,7": "A", "10,8": "S", "10,9": "E", "10,10": "M", "10,11": "E", // RELEASEME
-                        "0,6": "N", "1,6": "E", "2,6": "C", "3,6": "K", "4,6": "L", "5,6": "A", "6,6": "C", "7,6": "E", // NECKLACE
-                        "10,6": "G", "11,6": "I", "12,6": "G", "13,6": "G", "14,6": "L", "15,6": "E", "16,6": "S", // GIGGLES
-                        "0,8": "B", "1,8": "I", "2,8": "T", // BIT
-                        "6,10": "H", "7,10": "A", "8,10": "R", "9,10": "P", "10,10": "E", "11,10": "R", "12,10": "S", // HARPERS
-                        "2,12": "S", "3,12": "I", "4,12": "M", "5,12": "P", "6,12": "L", "7,12": "Y", "8,12": "N", "9,12": "O", "10,12": "T", "11,12": "T", "12,12": "R", "13,12": "U", "14,12": "E", // SIMPLYNOTTRUE
-                        "8,14": "P", "8,15": "L", "8,16": "E", "8,17": "A", "8,18": "S", "8,19": "E", "8,20": "S" // PLEASES
-                    };
+    <!-- Buttons BELOW the puzzle -->
+    <div class="buttons">
+        <button id="pauseButton">Gimme a sec</button>
+        <button id="resetButton">Reset</button>
+        <button id="checkPuzzle">Check Answers</button>
+    </div>
+    
+<!-- Pause Overlay -->
+<div id="pauseOverlay">
+    <button id="resumeButton">Let's Continue</button>
+</div>
 
-                    let key = `${x},${y}`;
-                    if (answers[key]) {
-                        answer = answers[key];
-                    } else {
-                        isBlack = true;
-                    }
-
-                    if (isBlack) {
-                        document.write('<td class="black"></td>');
-                    } else {
-                        document.write(`<td><input type="text" maxlength="1" data-answer="${answer}"></td>`);
-                    }
-                }
-                document.write('</tr>');
-            }
-            document.write('</tbody>');
-        </script>
-    </table>
-
-    <button id="checkPuzzle">Check Answers</button>
     <p id="result"></p>
 
     <!-- Clues Section -->
