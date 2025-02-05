@@ -124,3 +124,24 @@ button:hover, #homeButton:hover {
     border-radius: 15px;
     cursor: pointer;
 }
+
+/* Make result message larger */
+#result {
+    font-size: 2rem; /* Same as button text */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Space between result and buttons */
+}
+
+/* Make the timer much larger */
+#timer {
+    font-size: 2.5rem; /* Bigger timer text */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Space between timer and crossword */
+}
+
+/* Adjust button spacing */
+#checkPuzzle, #pauseButton, #resetButton {
+    margin-top: 10px; /* Space between buttons */
+}

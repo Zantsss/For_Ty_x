@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
     playButton.addEventListener("click", function () {
         if (song.paused) {
             song.play();
-            playButton.textContent = "PAUUUUUSEEE";
+            playButton.textContent = "PAUUSEEE";
         } else {
             song.pause();
-            playButton.textContent = "RESUUUUUME";
+            playButton.textContent = "RESUUMEEE";
         }
     });
 });
