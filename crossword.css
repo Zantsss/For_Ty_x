@@ -173,3 +173,8 @@ button:hover, #homeButton:hover {
         transform-origin: top center;  /* Ensures it stays centered */
     }
 }
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
