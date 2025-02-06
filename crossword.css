@@ -145,3 +145,16 @@ button:hover, #homeButton:hover {
 #checkPuzzle, #pauseButton, #resetButton {
     margin-top: 10px; /* Space between buttons */
 }
+
+#pause-screen {
+    position: fixed;  /* Ensures it stays over everything */
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: #f5f1e6; /* Beige overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it's above everything */
+}
