@@ -128,3 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+
+document.getElementById("pause-screen").classList.remove("hidden");
+
+document.getElementById("pause-screen").classList.add("hidden");
