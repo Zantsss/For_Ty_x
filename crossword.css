@@ -145,36 +145,3 @@ button:hover, #homeButton:hover {
 #checkPuzzle, #pauseButton, #resetButton {
     margin-top: 10px; /* Space between buttons */
 }
-
-#pause-screen.hidden {
-    display: none;
-}
-
-#crossword-container {
-    max-width: 100vw;  /* Ensures it never exceeds the screen width */
-    overflow: hidden;  /* Prevents horizontal scrolling */
-    margin: 0 auto;  /* Centers it */
-}
-
-#crossword-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 100%;
-}
-
-@media (max-width: 768px) {  /* Adjusts layout for mobile screens */
-    #crossword-container {
-        width: 95vw;  /* Keeps it within viewport width */
-    }
-
-    #crossword-grid {
-        transform: scale(0.9);  /* Slightly shrink it to fit */
-        transform-origin: top center;  /* Ensures it stays centered */
-    }
-}
-
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
