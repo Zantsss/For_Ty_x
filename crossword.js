@@ -135,11 +135,13 @@ document.getElementById("pause-screen").classList.add("hidden");
 
 pauseButton.addEventListener("click", function () {
     pauseOverlay.style.display = "flex";
-    document.body.style.overflow = "hidden"; // Prevent scrolling
+    document.body.style.overflow = "hidden"; // Prevents scrolling
+    document.getElementById("crossword").style.pointerEvents = "none"; // Blocks input
 });
 
 resumeButton.addEventListener("click", function () {
     pauseOverlay.style.display = "none";
-    document.body.style.overflow = "auto"; // Allow scrolling again
+    document.body.style.overflow = "auto"; // Restores scrolling
+    document.getElementById("crossword").style.pointerEvents = "auto"; // Allows input again
 });
 
