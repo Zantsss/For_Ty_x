@@ -146,39 +146,27 @@ button:hover, #homeButton:hover {
     margin-top: 10px; /* Space between buttons */
 }
 
-/* Mobile-Specific Adjustments */
-@media (max-width: 768px) {
-    /* Expand Crossword Container to Fit Content */
-    .crossword-container {
-        min-width: 105vw; /* Slightly wider than the crossword */
-        max-width: 110vw;
-        overflow-x: auto; /* Prevents unwanted side-scrolling */
-    }
+/* Pause Overlay - Mobile Fix */
+#pauseOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(245, 241, 230, 0.95); /* Beige overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
 
-    /* Prevent Page From Being Too Wide */
-    html, body {
-        overflow-x: hidden;
+/* Mobile-specific fixes */
+@media screen and (max-width: 768px) {
+    #pauseOverlay {
         width: 100%;
-    }
-
-    /* Ensure the Crossword Grid Scales Properly */
-    #crossword {
-        transform: scale(0.95); /* Slightly shrink for mobile */
-        transform-origin: top center;
-    }
-
-    /* Spread Out Timer & Buttons */
-    .buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Ensures even spacing */
-        gap: 10px; /* Space between buttons */
-    }
-
-    /* Prevent Timer From Getting Cramped */
-    #timer {
-        font-size: 2rem; /* Adjust size slightly */
-        text-align: center;
-        margin-bottom: 15px;
+        height: 100%;
+        min-height: 100vh; /* Ensures full coverage */
+        overflow: hidden; /* Prevents scrolling while paused */
     }
 }

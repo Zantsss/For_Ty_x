@@ -132,3 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("pause-screen").classList.remove("hidden");
 
 document.getElementById("pause-screen").classList.add("hidden");
+
+pauseButton.addEventListener("click", function () {
+    pauseOverlay.style.display = "flex";
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+});
+
+resumeButton.addEventListener("click", function () {
+    pauseOverlay.style.display = "none";
+    document.body.style.overflow = "auto"; // Allow scrolling again
+});
+
