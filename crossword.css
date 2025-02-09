@@ -166,3 +166,9 @@ button:hover, #homeButton:hover {
 #resumeButton {
     pointer-events: auto;
 }
+
+iframe {
+    max-width: 600px; /* Prevents it from being too wide */
+    margin: 20px auto; /* Centers it */
+    display: block; /* Ensures proper spacing */
+}

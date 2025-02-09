@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'TeejHandwriting';
+    src: url('TeejHandwriting-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'TeejHandwriting', Arial, sans-serif;
+    color: #911919; /* Maroon text */
+    background-color: #f5f1e6; /* Light Beige */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 6rem; /* Extra Huge Heading */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 3rem; /* Bigger Subheading */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.no-bullets {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.no-bullets li {
+    font-size: 2.5rem; /* Makes the list text larger */
+    margin: 15px 0;
+    display: block;
+}
+
+/* Styling for Links & Buttons */
+a, #playSong, #extraContent {
+    font-size: 2rem; /* Bigger link text */
+    font-weight: bold;
+    color: #911919; /* Same as text */
+    text-decoration: none;
+    padding: 15px 30px;
+    border: 3px solid #911919;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px; /* Reduced margin for tighter spacing */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 220px; /* Forces all buttons/links to have the same length */
+    text-align: center;
+}
+
+a:hover, #playSong:hover, #extraContent:hover {
+    background-color: #911919;
+    color: #f5f1e6;
+}
+
+/* Fix for Story Page */
+.story {
+    font-family: 'TeejHandwriting', Arial, sans-serif;
+}
+
+.story p {
+    font-size: 2.2rem; /* Bigger Story Text */
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.story h1 {
+    font-size: 4.5rem; /* Bigger Story Title */
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#toggleMusic {
+    font-family: 'TeejHandwriting', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f5f1e6; /* Match other buttons */
+    color: #911919;
+    border: 3px solid #911919;
+    padding: 15px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin: 15px; /* Add space around it */
+    width: 220px; /* Ensure consistent width */
+    text-align: center;
+}
+
+#toggleMusic:hover {
+    background-color: #911919;
+    color: #f5f1e6;
+}
