@@ -60,6 +60,30 @@
     color: #f5f1e6;
   }
   
+/* Universal button styling (for consistency) */
+button, a {
+    font-family: 'ZantsinYapantsHandwriting-Regular', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f5f1e6;
+    color: #911919;
+    border: 3px solid #911919;
+    padding: 15px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 220px;
+    margin: 10px;
+}
+
+button:hover, a:hover {
+    background-color: #911919;
+    color: #f5f1e6;
+}
+
   #timerContainer {
     padding: 20px;
     border-radius: 15px;
@@ -94,3 +118,18 @@
     }
   }
   
+  .cursor-trail {
+    position: absolute;
+    font-family: 'TeejHandwriting', Arial, sans-serif;
+    font-size: 1.8rem;
+    color: #911919;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+}
+
+.cursor-trail.fade-out {
+    opacity: 0;
+}

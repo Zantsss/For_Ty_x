@@ -1,3 +1,32 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const trailText = "MWAH!";
+    let trailIndex = 0;
+    const maxTrails = 5;
+    const trailDelay = 300; // ms between each trail
+    const trailLifespan = 1200; // ms until fade out
+
+    document.addEventListener("mousemove", (e) => {
+        if (trailIndex >= maxTrails) return;
+
+        trailIndex++;
+        const span = document.createElement("span");
+        span.textContent = trailText;
+        span.className = "cursor-trail";
+        span.style.left = `${e.pageX}px`;
+        span.style.top = `${e.pageY}px`;
+        document.body.appendChild(span);
+
+        setTimeout(() => {
+            span.classList.add("fade-out");
+        }, trailLifespan - 300);
+
+        setTimeout(() => {
+            span.remove();
+            trailIndex--;
+        }, trailLifespan);
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     // PLAY / PAUSE MUSIC BUTTON
     const song = document.getElementById("song");
